@@ -26,7 +26,7 @@ const index = ({
       {/* <PersonalStats /> */}
       {/* <TronIncomeStats /> */}
       {/* <DepositHistory /> */}
-      <Features />
+      {/* <Features /> */}
     </div>
   )
 }

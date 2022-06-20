@@ -1,9 +1,11 @@
 :root {
-  --font-NotoSans: 'noto-sans', sans-serif;
+  --font-Inter: 'Inter', sans-serif;
   --font-size-normal: 16px;
   --font-size-small: 12px;
   --font-size-2x: 24px;
   --font-size-3x: 32px;
+
+  --text-faded: rgba(255, 255, 255, .5);
 
  --col-blue-1: #1E2329;
  --col-blue-2: #242A32; 
@@ -46,7 +48,7 @@ a {
   padding: 0;
   margin: 0;
   font-size: var(--font-size-normal);
-  font-family: var(--font-NotoSans);
+  font-family: var(--font-Inter);
   scroll-behavior: smooth;
 }
 
@@ -111,7 +113,7 @@ body {
 
 body * {
   box-sizing: border-box;
-  font-family: var(--font-NotoSans);
+  font-family: var(--font-Inter);
 }
 
 body:not(.home) p {

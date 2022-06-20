@@ -199,7 +199,10 @@ export default function Layout({ children, router: { route }, networks }) {
           content="https://yieldclub.net/feature-meta.jpg"
         />
         <meta name="title" content="YieldClub" />
-        <meta name="description" content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain" />
+        <meta
+          name="description"
+          content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain"
+        />
         <meta property="og:title" content="YieldClub" />
         <meta
           property="og:image"
@@ -207,12 +210,18 @@ export default function Layout({ children, router: { route }, networks }) {
         />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain" />
+        <meta
+          property="og:description"
+          content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain"
+        />
         <meta property="og:url" content="https://yieldclub.net" />
         <meta property="og:site_name" content="YieldClub" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="YieldClub" />
-        <meta property="twitter:description" content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain" />
+        <meta
+          property="twitter:description"
+          content="YieldClub is a Community Driven Yield Fund Based On BNB Smart Chain"
+        />
         <meta
           property="twitter:image"
           content="https://yieldclub.net/feature-meta.jpg"
@@ -222,143 +231,53 @@ export default function Layout({ children, router: { route }, networks }) {
         <meta property="twitter:url" content="https://yieldclub.net" />
         <meta property="og:title" content="YieldClub" />
         <meta name="twitter:title" content="YieldClub" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <main className={`${styles.main} flex-column justify-between`}>
         <ToastContainer />
         <header className={styles.header}>
-          <div
-            className="flex-center justify-between limited"
-            style={{ maxWidth: "1200px", margin: "0 auto" }}
-          >
+          <div className={`${styles.nav_menus}`}>
             <div className="flex-center">
-              <FiMenu
-                className={`${styles.hamburger} cursor`}
-                onClick={() => setIsCollapse(!isCollapse)}
-              />
               <Link href="/">
-                {/* <h2 style={{ color: "#fff", margin: "0" }}>LOGO</h2> */}
-                <img src="/logo/yieldClub.svg" alt="" className={styles.logo} />
+                <h2 style={{ color: "#fff", margin: "0" }}>YSD</h2>
+                {/* <img src="/logo/yieldClub.svg" alt="" className={styles.logo} /> */}
               </Link>
             </div>
-            <div className={styles.nav_menus}>
-              <div className={`flex ${styles.menu}`}>
-                <Link href="/">
-                  <a className={router?.asPath == "/" ? styles.active : ""}>
-                    {" "}
-                    Home
-                  </a>
-                </Link>
-                <div
-                  className={
-                    router?.asPath == "/"
-                      ? styles.active_diagonal
-                      : styles.hidden_diagonal
-                  }
-                ></div>
-              </div>
-
-              <div className={`flex ${styles.menu}`}>
-                <Link href="/referral">
-                  <a
-                    className={
-                      router?.asPath?.includes("referral") ? styles.active : ""
-                    }
-                  >
-                    Referral
-                  </a>
-                </Link>
-                <div
-                  className={
-                    router?.asPath?.includes("referral")
-                      ? styles.active_diagonal
-                      : styles.hidden_diagonal
-                  }
-                ></div>
-              </div>
-
-              <div className={`flex ${styles.menu}`}>
-                <Link href="/statistics">
-                  <a
-                    className={
-                      router?.asPath?.includes("statistics")
-                        ? styles.active
-                        : ""
-                    }
-                  >
-                    Statistics
-                  </a>
-                </Link>
-                <div
-                  className={
-                    router?.asPath?.includes("statistics")
-                      ? styles.active_diagonal
-                      : styles.hidden_diagonal
-                  }
-                ></div>
-              </div>
-            </div>
             <div className="flex-center">
-              <div className={styles.mobileMenu}>
-                <div className={styles.collapseContent} id="collapse-content">
-                  <Collapse isOpened={isCollapse}>
-                    <div className={`${styles.menuContent} flex-all`}>
-                      <Link href="/">
-                        <a
-                          className={router?.asPath == "/" ? styles.active : ""}
-                          onClick={() => setIsCollapse(false)}
-                        >
-                          {" "}
-                          Home
-                        </a>
-                      </Link>
-                      <Link href="/referral">
-                        <a
-                          className={
-                            router?.asPath?.includes("referral")
-                              ? styles.active
-                              : ""
-                          }
-                          onClick={() => setIsCollapse(false)}
-                        >
-                          {" "}
-                          Referral
-                        </a>
-                      </Link>
-                      <Link href="/statistics">
-                        <a
-                          className={
-                            router?.asPath?.includes("statistics")
-                              ? styles.active
-                              : ""
-                          }
-                          onClick={() => setIsCollapse(false)}
-                        >
-                          {" "}
-                          Statistics
-                        </a>
-                      </Link>
-                      <Link href="/how-to-join">
-                        <a>
-                          {" "}
-                          <button className={styles.how_to_join_mb}>
-                            How to Join
-                          </button>
-                        </a>
-                      </Link>
-                    </div>
-                  </Collapse>
-                </div>
-              </div>
               <Link href="/how-to-join">
                 <a>
-                  <button className={styles.how_to_join}>How to Join</button>
+                  <button className={styles.add_to_wallet}>
+                    Add to Wallet
+                  </button>
+                </a>
+              </Link>
+              <Link href="/how-to-join">
+                <a>
+                  <button className={styles.how_to_join}>Buy YSD</button>
                 </a>
               </Link>
               <Account
@@ -371,31 +290,7 @@ export default function Layout({ children, router: { route }, networks }) {
             </div>
           </div>
         </header>
-        {/* <div className={styles.mobileMenu}>
-          <div
-            className={styles.collapseContent}
-            id="collapse-content"
-          >
-            <Collapse isOpened={isCollapse}>
-              <div className={`${styles.menuContent} flex-all`}>
-                <div
-                  className={`flex-center ${
-                    router.pathname == '/mint' ? styles.activeMenu : ''
-                  }`}
-                >
-                  <Link href="/mint">Mint</Link>
-                </div>
-                <div
-                  className={`flex-center ${
-                    router.pathname == '/claim' ? styles.activeMenu : ''
-                  }`}
-                >
-                  <Link href="/claim">Claim</Link>
-                </div>
-              </div>
-            </Collapse>
-          </div>
-        </div> */}
+
         <MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
         {React.cloneElement(children, {
           state,
@@ -405,8 +300,8 @@ export default function Layout({ children, router: { route }, networks }) {
           userInfo,
         })}
         <>
-          <Disclaimer />
-          <footer className={styles.footer_wrapper}>
+          {/* <Disclaimer /> */}
+          {/* <footer className={styles.footer_wrapper}>
             <div className={styles.footer_container}>
               <p>© Copyright YieldClub . All Rights Reserved</p>
               <div className={styles.social}>
@@ -423,7 +318,7 @@ export default function Layout({ children, router: { route }, networks }) {
                 </a>
               </div>
             </div>
-          </footer>
+          </footer> */}
         </>
       </main>
     </>
