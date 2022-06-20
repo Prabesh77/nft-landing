@@ -1,0 +1,343 @@
+:root {
+  --font-NotoSans: 'noto-sans', sans-serif;
+  --font-size-normal: 16px;
+  --font-size-small: 12px;
+  --font-size-2x: 24px;
+  --font-size-3x: 32px;
+
+ --col-blue-1: #1E2329;
+ --col-blue-2: #242A32; 
+ --col-yellow: #FCD535;
+ --col-text: #D2D3D4;
+
+  --color-black: #000000;
+  --color-black2: #232323;
+  --color-black3: #131212;
+  --color-white: #ffffff;
+  --color-gray: #7d7d7d;
+  --color-gray-2: #7E7E7E;
+  --color-purple: #8d62d6;
+  --color-brown: #f2a65a;
+  --color-dark-purple: #A344CC;
+  --color-opacity: rgb(236 195 202 / 65%);
+  --color-black-04: rgb(0 0 0 / 85%);
+  --color-divider: #00081d;
+  --color-primary-bg: #07081d;
+
+  --modal-shadow: 0px 16px 40px rgba(0, 0, 0, 0.02);
+
+  --padding-normal: 24px;
+  --padding-narrow: 12px;
+  --padding-wide: 36px;
+
+  --z-top: 101;
+}
+
+.hide {
+  display: none;
+}
+
+html,
+body,
+div,
+p,
+span,
+a {
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-normal);
+  font-family: var(--font-NotoSans);
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+.walletModalWrap {
+  max-width: 500px;
+}
+.walletModalWrap .ant-modal-content{
+  width: 100%;
+  max-width: 500px;
+  border: solid 1px #5ec7be;
+  background-color: #5ec7be;
+  padding: 80px 0px;
+}
+.walletModalWrap .ant-modal-body {
+  padding: 0px;
+}
+
+.transactionModalWrap .ant-modal-content {
+  width: 100%;
+  max-width: 534px;
+  box-shadow: 0px 10px 29px 0 rgba(0, 0, 0, 0.06);
+  /* border: solid 1px #d9d9d9; */
+  background-color: transparent;
+  padding: 98px 106px 88px;
+}
+.transactionModalWrap .ant-modal-body {
+  padding: 0px;
+}
+.menuModalWrap {
+  margin: unset;
+}
+.menuModalWrap .ant-modal-content {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 10px 29px 0 rgba(0, 0, 0, 0.06);
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  padding: 0px;
+}
+.menuModalWrap .ant-modal-body {
+  padding: 0px;
+}
+
+.punkModalWrap .ant-modal-content {
+  width: 100%;
+  max-width: 1277px;
+  box-shadow: 0px 10px 29px 0 rgba(0, 0, 0, 0.06);
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  padding: 0px;
+}
+.punkModalWrap .ant-modal-body {
+  padding: 0px;
+}
+
+.ReactCollapse--collapse {
+  transition: height 300ms;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: var(--font-NotoSans);
+}
+
+body:not(.home) p {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a,
+button,
+.cursor {
+  cursor: pointer;
+  user-select: none;
+}
+button {
+  border: none;
+}
+.connectionWrap {
+  margin-top: 110px !important;
+}
+.errMsgWrap {
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px solid #ff4d4f;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ff4d4f;
+  margin: 4px 0;
+  text-align: center;
+}
+.successMsg {
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px solid #52c41a;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #52c41a;
+  margin: 4px 0;
+  text-align: center;
+}
+.PhoneInput input:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.terms_condition_wrap .ant-form-item-explain {
+  display: none !important;
+  height: 0 !important;
+}
+
+.ant-modal-mask {
+  backdrop-filter: blur(10px);
+  border: solid 1px #707070;
+}
+.ant-checkbox {
+  margin-top: -10px;
+}
+.ant-checkbox-wrapper.ant-checkbox-wrapper-in-form-item input[type='checkbox'] {
+  width: 30px;
+  height: 30px;
+}
+.ant-checkbox-inner {
+  width: 30px;
+  height: 30px;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  border: solid 1px #e8e8e8;
+  background-color: black;
+}
+.ant-checkbox-inner::after {
+  width: 7.714286px;
+  height: 15.142857px;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-top: 0;
+  border-left: 0;
+}
+.ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active {
+  background: #cccccc;
+  color: #666666;
+}
+.ant-btn:hover, .ant-btn:focus, .ant-btn:active {
+  background: black;
+  color: white;
+  border-color: #81D8D0;
+}
+.ant-checkbox + span {
+  padding-right: 0px;
+}
+.ant-picker {
+  width: 100%;
+  border: solid 1px #e8e8e8;
+  background-color: #f5f5f5;
+  padding: 0px 11px 0px;
+}
+.ant-picker input {
+  border: none !important;
+}
+.center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.flex {
+  display: flex;
+}
+.flex-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+.flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.relative {
+  position: relative;
+}
+.fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.full {
+  width: 100%;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+
+.limited {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.font-small {
+  font-size: 75%;
+}
+
+.font-large {
+  font-size: 170%;
+}
+
+.border-right {
+  border-right: 1px solid var(--color-divider);
+}
+
+@media all and (max-width: 567px) {
+  .limited {
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  body {
+    font-size: var(--font-size-small);
+  }
+  .limited {
+    width: 100%;
+  }
+  footer .limited {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .slick-track {
+    height: auto !important;
+  }
+}
+
+@media all and (min-width: 2400px) {
+  body {
+    font-size: var(--font-size-2x);
+  }
+  .limited {
+    max-width: 1860px;
+    padding: calc(var(--padding-normal) * 1.5);
+  }
+}
+@media all and (min-width: 3200px) {
+  body {
+    font-size: var(--font-size-3x);
+  }
+  .limited {
+    max-width: 2600px;
+  }
+}
+
+

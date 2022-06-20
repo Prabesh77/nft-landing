@@ -1,0 +1,55 @@
+.walletWrap .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: #000;
+    font-family: var(--font-sfpro);
+}
+@media all and (max-width: 767px) {
+    .walletWrap .title {
+        font-size: 24px;
+    }
+}
+
+.btnWrap {
+    padding: 40px 82px 0px;
+}
+@media all and (max-width: 767px) {
+    .btnWrap {
+        padding: 24px;
+    }   
+}
+.btnWrap button {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: solid 2px #000;
+    background-color: transparent;
+    color: black;
+    padding: 9px 0px 9px 32px;
+}
+.btnWrap button:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.btnWrap button span {
+    font-size: 26px;
+    font-weight: normal;
+    font-family: var(--font-sfpro);
+}
+@media all and (max-width: 767px) {
+    .btnWrap button span {
+        font-size: 20px;
+    }
+}
+.btnWrap button img {
+    height: 32px;
+    margin-right: 44px;
+}
+
+@media all and (max-width: 767px) {
+    .btnWrap button img {
+        height: 32px;
+        margin-right: 24px;
+    }   
+}

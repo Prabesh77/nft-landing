@@ -1,0 +1,40 @@
+.disclaimer_wrapper {
+    background: var(--col-blue-2);
+    .disclaimer_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 8px;
+        .title {
+            color: var(--col-yellow);
+        }
+        p {
+            color: #ccc;
+            font-weight: 200;
+        }
+      
+    }
+    .companies {
+        border-top: 0.5px solid rgba(255, 255, 255, .2);
+        padding: 0.8rem 0;
+        .companies_container {
+            max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 8px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-gap: 1rem;
+        justify-items: center;
+        .company {
+            height: 40px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // img {
+            //     height: 100%;
+            //     width: 100%;
+            // }
+        }
+        }
+    }
+}

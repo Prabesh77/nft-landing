@@ -1,0 +1,142 @@
+.income_wrapper {
+  background: linear-gradient(
+    316.13deg,
+    rgba(36, 42, 50, 0.79) 0.65%,
+    rgba(36, 42, 50, 0.87) 66.21%
+  );
+  min-height: 500px;
+  .income_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 8px;
+    .title {
+      color: var(--col-yellow);
+      font-size: 28px;
+      margin-bottom: 1rem;
+    }
+    .withdrawable_income {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      @media(max-width: 450px) {
+        flex-direction: column;
+      }
+      .left {
+        background: linear-gradient(90deg, #3d444b 0.82%, #141a22 94.97%);
+        border-radius: 8px;
+        width: 83%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 1rem;
+        @media(max-width: 450px) {
+            width: 100%;
+          }
+        p {
+          color: #ccc;
+          img {
+            height: 25px;
+            width: 25px;
+            margin-right: 1rem;
+          }
+        }
+      }
+      .right {
+        width: 15%;
+        background: var(--col-yellow);
+        padding: 3px 0;
+        border-radius: 6px;
+        @media(max-width: 450px) {
+            width: 50%;
+            margin: 12px auto;
+            padding: 6px 0;
+          }
+      }
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @media(max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media(max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 1rem;
+      }
+      grid-gap: 2rem;
+      .stats_col {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        .stat_title {
+          background: linear-gradient(
+            179.93deg,
+            rgba(255, 255, 255, 0.1) -15.66%,
+            rgba(255, 255, 255, 0) 99.94%
+          );
+          border-radius: 4px 4px 0px 0px;
+          color: #aaa;
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 10px 0;
+          font-size: 2rem;
+        }
+        .stat {
+            position: relative;
+          background: linear-gradient(
+            271.61deg,
+            rgba(255, 255, 255, 0.1) -38.45%,
+            rgba(255, 255, 255, 0) 138.4%
+          );
+          border-radius: 4px;
+          width: 100%;
+          text-align: center;
+          padding: 1.5rem 0;
+          margin-top: 6rem;
+          color: #eee;
+          span {
+              color: #ccc;
+          }
+          p {
+              color: var(--col-yellow);
+              font-size: 18px;
+          }
+          .timeline {
+              position: absolute;
+            border-bottom: 1px dashed #eee;
+            top: -48%;
+            left: 40%;
+            transform: translateX(-50%);
+            width: 90px;
+            transform: rotate(90deg);
+            .circle {
+                height: 20px;
+                width: 20px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -10px;
+                left: 70%;
+                transform: translateX(-50%);
+                .circle_filled {
+                    background: #ccc;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+
+                }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}

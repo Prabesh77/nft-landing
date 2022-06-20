@@ -1,0 +1,109 @@
+.account button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    object-fit: contain;
+    background-color: var(--col-yellow);
+    font-size: 15px;
+    padding: 0 16px;
+    color: #333;
+    margin-top: 0 !important;
+    border-radius: 4px;
+    font-weight: 300;
+}
+.accountInfo {
+    font-size: 14px;
+    font-weight: normal;
+    color: #eee;
+    border: 0.5px solid rgba(255, 255, 255, .07);
+    padding: 0 6px;
+}
+.accountInfo .ethIcon {
+    height: 16px;
+    margin-right: 23px;
+}
+
+.accountInfo .walletIcon {
+    height: 24px;
+    margin-left: 18px;
+    margin-right: 8px;
+}
+@media(max-width: 500px) {
+    .accountInfo .walletIcon {
+        height: 20px;
+        margin-left: 10px;
+        margin-right: 8px;
+    }
+}
+
+.connectBtnWrap {
+    max-width: 535px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 29px 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px #d9d9d9;
+    background-color: #fff;
+    padding: 24px 0 60px;
+}
+.connectBtnInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 24px;
+}
+.connectBtnInfo .title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-sfpro);
+    color: #000;
+}
+.connectBtnInfo .description {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-sfpro);
+    margin-top: 16px;
+    color: #000;
+}
+.btnWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+}
+.btnWrap button {
+    width: 100%;
+    max-width: 449px;
+    border: solid 2px #000;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    padding: 4px 8px;
+    margin-top: 42px;
+}
+@media all and (max-width: 767px) {
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .account button {
+        margin-top: 12px;
+    }
+    .walletInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .connectBtnWrap {
+        width: calc(100% - 48px);
+    }
+}

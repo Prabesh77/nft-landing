@@ -1,0 +1,34 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+  padding: 85px 24px;
+}
+.errorContent {
+  width: 100%;
+  max-width: 1180px;
+  margin-bottom: 24px;
+}
+.walletContent {
+  width: 100%;
+  max-width: 1180px;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  font-family: var(--font-baskerville);
+}
+
+.walletList {
+  margin-top: 22px;
+}
+
+.walletList .walletItem {
+  border-top: 1px solid #000;
+  padding-top: 75px;
+  margin-bottom: 35px;
+}

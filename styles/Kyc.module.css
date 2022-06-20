@@ -1,0 +1,14 @@
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.kycWrap {
+  margin-top: 40px;
+}

@@ -1,0 +1,78 @@
+.tron_stats_wrapper {
+    background: var(--col-blue-2);
+    height: 150px;
+    @media(max-width: 900px) {
+        min-height: 150px;
+        height: 100%;
+    }
+    .tron_stats_container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 8px;
+        .title {
+            color: var(--col-yellow);
+            text-align: center;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 1rem;
+            margin-top:2rem;
+            .stat {
+                background:  linear-gradient(180deg, #3D444B 0%, #141A22 100%);
+                border-radius: 8px;
+                color: #eee;
+                text-align: center;
+                padding: 1.5rem;
+                border: 1px solid;
+
+border-image-source: linear-gradient(178.79deg, rgba(255, 255, 255, 0) 14.62%, rgba(255, 255, 255, 0.26) 119.52%);
+                .label {
+                    color: var(--col-yellow);
+                }
+                .value {
+                    background: 
+                    linear-gradient(
+                      to right, 
+                      var(--col-blue-1),
+                     #fff 15%,
+                     #fff 30%,
+                     #fff 45%,
+                     #fff 60%,
+                     #fff 75%,
+                      var(--col-blue-1) 100%
+                    )
+                    left 
+                    top
+                    no-repeat; 
+                  background-size:100% 1px ;
+                  padding-top: 8px;
+                  margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.tron_stats_wrapper_bottom {
+    background: var(--col-blue-1);
+    height: 150px;
+    @media(max-width: 900px) {
+      height: 90px;
+    }
+    .tron_stats_container {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 8px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        button {
+            background: var(--col-yellow);
+            padding: 6px 3rem;
+        }
+    }
+}

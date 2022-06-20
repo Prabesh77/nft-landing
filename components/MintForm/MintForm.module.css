@@ -1,0 +1,127 @@
+.mintFormWrap {
+  display: flex;
+  width: 100%;
+  max-width: 860px;
+}
+@media all and (max-width: 976px) {
+  .mintFormWrap {
+    padding: 24px;
+  }
+}
+@media all and (max-width: 767px) {
+  .mintFormWrap {
+    width: calc(100% - 48px);
+    flex-direction: column;
+  }
+}
+.pendantImg {
+  flex: 1;
+}
+@media all and (max-width: 767px) {
+  .pendantImg {
+    margin-bottom: 24px;
+  } 
+}
+.pendantImg img {
+  width: 100%;
+  max-width: 500px;
+  border: solid 1px #000;
+}
+
+.mintForm {
+  flex: 1;
+  padding-left: 59px;
+}
+@media all and (max-width: 976px) {
+  .mintForm {
+    padding-left: 24px;
+  }
+}
+@media all and (max-width: 767px) {
+  .mintForm {
+    padding-left: 0px;
+  }
+}
+.title {
+  font-size: 30px;
+  font-weight: normal;
+  color: #000;
+  font-family: var(--font-baskerville);
+}
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  font-family: var(--font-santral);
+}
+.value {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  font-family: var(--font-santral);
+}
+.value span {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  font-family: var(--font-santral);
+  cursor: pointer;
+}
+.value .disabled {
+  cursor: not-allowed;
+  color: grey;
+}
+.totalNFTs {
+  width: 100%;
+}
+
+.totalNFTs {
+  color: #000;
+}
+.form {
+  margin-top: 14px;
+  padding-top: 24px;
+  border-top: 1px solid #000;
+}
+
+.amountField {
+  width: 100%;
+  height: 42px;
+}
+.balance {
+  margin-left: 14px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  font-family: var(--font-santral);
+}
+.btnWrap {
+  margin-top: 25px;
+}
+.btnWrap button {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  border: solid 2px #000;
+  background-color: #000;
+  font-size: 18px;
+  color: #fff;
+  font-family: var(--font-santral);
+}
+
+.descriptionWrap {
+  margin-top: 40px;
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  font-family: var(--font-santral);
+  margin-bottom: 19px;
+}
+.description {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  font-family: var(--font-santral);
+}

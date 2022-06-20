@@ -1,0 +1,77 @@
+.deposit_history_wrapper {
+    background: var(--col-blue-1);
+    padding-top: 1.5rem;
+    .deposit_history_container {
+        background: var(--col-blue-2);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        .title {
+            color: var(--col-yellow);
+        }
+        .history_list {
+            max-height: 500px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 4px; /* width of the entire scrollbar */
+                height: 10px;
+              }
+              &::-webkit-scrollbar-track {
+                background: #eee; /* color of the tracking area */
+              }
+              &::-webkit-scrollbar-thumb {
+                background-color: var(--col-yellow); /* color of the scroll thumb */
+                border-radius: 20px; /* roundness of the scroll thumb */
+              }
+            .not_found {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 200px;
+                overflow: hidden;
+                h3 {
+                    color: #555;
+                    font-size: 25px;
+                }
+                .icon {
+                    color: #555;
+                    font-size: 4rem;
+                }
+            }
+
+            .history_card {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                background: var(--col-blue-1);
+                padding: 10px 1rem;
+                border-left: 2px solid var(--col-yellow);
+                width: 98%;
+                margin: 1rem 0;
+                font-weight: 200;
+                @media(max-width: 768px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    .box:nth-child(3), .box:nth-child(4) {
+                        margin-top: 1rem;
+                    }
+                }
+               
+                .box {
+                    color: #eee;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    .label {
+                        color: #aaa;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .value {
+                        color: #ddd;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

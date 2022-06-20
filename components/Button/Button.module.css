@@ -1,0 +1,13 @@
+.button {
+  padding: 5px;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.padded {
+  background: orange !important;
+  margin-top: 1rem;
+}
