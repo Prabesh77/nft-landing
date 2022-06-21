@@ -28,7 +28,10 @@ const Banner = ({
   userInfo,
   connectWallet,
 }) => {
+  const [currentTab, setCurrentTab] = useState(0)
+  const [stakeTab, setStakeTab] = useState(0)
   const [stakeValue, setStakeValue] = useState(1)
+  const [stakeActionValue, setStakeActionValue] = useState("")
   const [loading, setLoading] = useState(false)
   const [assetInfo, setAssetInfo] = useState({ symbol: "yieldclub" })
   const router = useRouter()
@@ -164,117 +167,154 @@ const Banner = ({
     <>
       <div className={classes.banner_wrapper}>
         <div className={classes.banner_container}>
-          <div className={classes.left}>
-            <h1>YieldClub</h1>
-            <h3>is a Community Driven Yield Fund Based On BNB Smart Chain</h3>
-            <ul className={classes.bullet_points}>
-              <li>
-                <img src="/assets/checkmark.svg" alt="" />
-                <p>
-                  Earn Every Second & Withdraw Every 24 hours With YieldClub.
-                </p>
-              </li>
-              <li>
-                <img src="/assets/checkmark.svg" alt="" />
-                <p>Benefit From 4 Different Ways of Income.</p>
-              </li>
-              <li>
-                <img src="/assets/checkmark.svg" alt="" />
-                <p>YieldClub is the Most Profitable Yield Fund on BSC.</p>
-              </li>
-              <li>
-                <img src="/assets/checkmark.svg" alt="" />
-                <p>Become Part Of The Movement Today.</p>
-              </li>
-            </ul>
-            <ul className={classes.stats}>
-              <li>
-                <span className={classes.label}>Total Staked BNB</span>
-                <p>
-                  {totalInfo?.contractInfo?.length
-                    ? toFixed(Web3.utils.fromWei(totalInfo?.contractInfo[1]), 4)
-                    : 0}
-                </p>
-              </li>
-              <li>
-                <span className={classes.label}>Total Active Users</span>
-                <p>
-                  {totalInfo?.contractInfo?.length
-                    ? totalInfo?.contractInfo[0]
-                    : 0}
-                </p>
-              </li>
-              <li>
-                <span className={classes.label}>Top Leader Pool Balance</span>
-                <p>
-                  {totalInfo?.contractInfo?.length
-                    ? toFixed(Web3.utils.fromWei(totalInfo?.contractInfo[4]), 4)
-                    : 0}
-                </p>
-              </li>
-            </ul>
+          <div className={classes.row_one}>
+            <div className={classes.left}>
+              <div className={classes.label}>APR</div>
+              <h2>600%</h2>
+            </div>
+            <div className={classes.right}>
+              <div className={classes.label}>Current YSD Price</div>
+              <p>$.998121</p>
+            </div>
           </div>
-
-          <div className={classes.right}>
-            <div className={classes.join_box}>
-              <h3>Until Reward Distribution :</h3>
-              <RemainingSecs totalInfo={totalInfo} />
-              <li className={classes.count}>
-                <span>{poolDistribution} BNB</span> to be distributed today.
-              </li>
-              <h2 className={classes.join_title}>Join Now</h2>
-              <div className={classes.join_form}>
-                <input
-                  type="number"
-                  value={stakeValue}
-                  onChange={(e) => setStakeValue(+e.target.value)}
-                />
-                <div className={classes.add_buttons}>
-                  <button onClick={() => setStakeValue(stakeValue + 1)}>
-                    +1 BNB
-                  </button>
-                  <button onClick={() => setStakeValue(stakeValue + 5)}>
-                    +5 BNB
-                  </button>
-                  <button onClick={() => setStakeValue(stakeValue + 10)}>
-                    +10 BNB
-                  </button>
-                  <button onClick={() => setStakeValue(stakeValue + 50)}>
-                    +50 BNB
-                  </button>
-                  <button onClick={() => setStakeValue(stakeValue + 100)}>
-                    +100 BNB
-                  </button>
-                  <button onClick={() => setStakeValue(stakeValue + 200)}>
-                    +200 BNB
-                  </button>
-                </div>
-                <div className={classes.buttons}>
-                  <button
-                    className={`${classes.stake_btn} ${
-                      stakeValue <= 0 ? classes.stake_disabled : ""
-                    } `}
-                    onClick={() => handleStake()}
-                  >
-                    Stake Now
-                  </button>
-                  <button className={classes.guide_btn}>Guide</button>
-                </div>
+          <nav className={classes.navbar}>
+            <div className={classes.nav_menus}>
+              <div
+                className={`flex ${classes.menu}`}
+                onClick={() => setCurrentTab(0)}
+              >
+                {/* <Link href="/"> */}
+                <a className={currentTab === 0 ? classes.active : ""}>
+                  {" "}
+                  Staking
+                </a>
+                {/* </Link> */}
               </div>
-              <div className={classes.join_footer}>
-                <p>Referral Id:</p>
-                <p>{referralId}</p>
+
+              <div className={`flex ${classes.menu}`}>
+                {/* <Link href="/referral"> */}
+                <a
+                  className={currentTab === 1 ? classes.active : ""}
+                  onClick={() => setCurrentTab(1)}
+                >
+                  Auction
+                </a>
+                {/* </Link> */}
               </div>
             </div>
-            <img src="/assets/dots.png" alt="" className={classes.dots} />
+          </nav>
+
+          <div className={classes.stake}>
+            <p className={classes.title}>My Stake</p>
+            <div className={classes.stats}>
+              <div className={classes.left}>
+                <div className={classes.circle}></div>
+                <h3>10,000.2819</h3>
+                <span className={classes.minor}>($3,000.16)</span>
+              </div>
+              <div className={classes.right}>
+                <span className={classes.label}>YSD in Wallet</span>
+                <p className={classes.value}>
+                  <div className={classes.circle}></div> 10,000.2819
+                  <span className={classes.minor}>($3,000.16)</span>
+                </p>
+              </div>
+            </div>
+            <div className={classes.stake_actions}>
+              <nav className={classes.stake_nav}>
+                <div className={classes.nav_menus}>
+                  <div
+                    className={`flex ${classes.menu}`}
+                    onClick={() => setStakeTab(0)}
+                  >
+                    {/* <Link href="/"> */}
+                    <a className={stakeTab === 0 ? classes.active : ""}>
+                      {" "}
+                      Stake
+                    </a>
+                    {/* </Link> */}
+                  </div>
+
+                  <div className={`flex ${classes.menu}`}>
+                    {/* <Link href="/referral"> */}
+                    <a
+                      className={stakeTab === 1 ? classes.active : ""}
+                      onClick={() => setStakeTab(1)}
+                    >
+                      Unstake
+                    </a>
+                    {/* </Link> */}
+                  </div>
+                </div>
+              </nav>
+              <form
+                className={`${classes.stake_action_form} ${
+                  +stakeActionValue < 1 ? classes.input_error : ""
+                } `}
+              >
+                <input
+                  type="number"
+                  value={stakeActionValue}
+                  onChange={(e) => setStakeActionValue(e.target.value)}
+                  placeholder="Input Fill Text"
+                />
+
+                <div className={classes.buttons}>
+                  <span>Max</span>
+                  <button
+                    className={`${
+                      +stakeActionValue > 0 ? classes.active_btn : ""
+                    }`}
+                  >
+                    Stake
+                  </button>
+                </div>
+              </form>
+              {+stakeActionValue < 1 && (
+                <span className={classes.error_message}>Insufficient YSD</span>
+              )}
+            </div>
+          </div>
+
+          <div className={classes.rewards}>
+            <p className={classes.title}>My Rewards</p>
+            <div className={classes.stats}>
+              <div className={classes.left}>
+                <div className={classes.circle}>
+                  <img src="/coin_icon.png" alt="" />
+                </div>
+                <h3>10,000.2819</h3>
+                <span className={classes.minor}>($3,000.16)</span>
+              </div>
+              <div className={classes.right}>
+                <button>Collect</button>
+              </div>
+            </div>
+            <div className={classes.reward_stats}>
+              <div className={classes.stat}>
+                <span className={classes.label}>Darned to date:</span>
+                <div className={classes.value}>
+                  <div className={classes.circle}>
+                    <img src="/coin_icon.png" alt="" />
+                  </div>{" "}
+                  <p>10,000.2819</p>
+                  <span className={classes.minor}>($3,000.16)</span>
+                </div>
+              </div>
+              <div className={classes.stat}>
+                <span className={classes.label}>Collected to date:</span>
+                <div className={classes.value}>
+                  <div className={classes.circle}>
+                    <img src="/coin_icon.png" alt="" />
+                  </div>{" "}
+                  <p>10,000.2819</p>
+                  <span className={classes.minor}>($3,000.16)</span>
+                </div>
+                <h5>Last Collected 06:45, Mar.28, 2022</h5>
+              </div>
+            </div>
           </div>
         </div>
-        {/* <Income /> */}
-        <ClaimRewards
-          totalInfo={totalInfo}
-          userInfo={userInfo}
-          handleClaim={handleClaim}
-        />
       </div>
       {/* {loading && <TxLoader />} */}
 

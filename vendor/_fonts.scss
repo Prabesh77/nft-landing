@@ -1,40 +1,35 @@
-@font-face {
-    font-family: "noto-sans";
-    font-weight: 100;
-    font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-Thin.ttf") format('truetype');
-}
-@font-face {
-    font-family: "noto-sans";
-    font-weight: 200;
-    font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-Regular.ttf") format('truetype');
-}
 
 @font-face {
-    font-family: "noto-sans";
+    font-family: "Inter";
     font-weight: 300;
     font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-Medium.ttf") format('truetype');
+    src: url("/static/fonts/Inter/Inter-Regular.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: "noto-sans";
+    font-family: "Inter";
     font-weight: 400;
     font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-SemiBold.ttf") format('truetype');
+    src: url("/static/fonts/Inter/Inter-Medium.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: "noto-sans";
+    font-family: "Inter";
     font-weight: 500;
     font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-Bold.ttf") format('truetype');
+    src: url("/static/fonts/Inter/Inter-SemiBold.ttf") format('truetype');
 }
 
 @font-face {
-    font-family: "noto-sans";
+    font-family: "Inter";
     font-weight: 600;
     font-style: normal;
-    src: url("/static/fonts/Noto_Sans/NotoSans-ExtraBold.ttf") format('truetype');
+    src: url("/static/fonts/Inter/Inter-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/static/fonts/Inter/ExtraBold.ttf") format('truetype');
 }
