@@ -4,10 +4,10 @@
     justify-content: center;
     height: 42px;
     object-fit: contain;
-    background-color: #00BF58;
+    background-color: var(--col-main);
     font-size: 15px;
     padding: 0 16px;
-    color: #eee;
+    color: var(--col-main-text);
     margin-top: 0 !important;
     border-radius: 25px;
     font-weight: 300;

@@ -247,12 +247,18 @@ const Banner = ({
                   </div>
                 </div>
               </nav>
-              <form className={classes.stake_action_form}>
+              <form
+                className={`${classes.stake_action_form} ${
+                  +stakeActionValue < 1 ? classes.input_error : ""
+                } `}
+              >
                 <input
                   type="number"
                   value={stakeActionValue}
                   onChange={(e) => setStakeActionValue(e.target.value)}
+                  placeholder="Input Fill Text"
                 />
+
                 <div className={classes.buttons}>
                   <span>Max</span>
                   <button
@@ -264,6 +270,9 @@ const Banner = ({
                   </button>
                 </div>
               </form>
+              {+stakeActionValue < 1 && (
+                <span className={classes.error_message}>Insufficient YSD</span>
+              )}
             </div>
           </div>
 

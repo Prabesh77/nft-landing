@@ -24,11 +24,11 @@
       align-items: center;
       .left {
         .label {
-          color: #aaa;
+          color: var(--text-faded);
           font-size: 22px;
         }
         h2 {
-          color: #ccc;
+          color: var(--col-main-text);
           font-size: 50px;
           font-weight: 400;
           line-height: 50px;
@@ -43,11 +43,11 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
         .label {
-          color: #aaa;
-          font-size: 15px;
+          color: var(--text-faded);
+          font-size: 14px;
         }
         p {
-          color: #ccc;
+          color: var(--col-main-text);
           font-weight: 600;
           // line-height: 60px;
         }
@@ -72,18 +72,18 @@
       .nav_menus a {
         font-weight: 200;
         padding: 5px 15px;
-        color: #aaa;
+        color: var(--text-faded);
         border-bottom: 4px solid transparent;
       }
 
       .nav_menus .active {
-        border-bottom: 4px solid #eee;
-        color: #eee;
+        border-bottom: 4px solid var(--col-main-text);
+        color: var(--col-main-text);
       }
     }
 
     .stake {
-      background: rgba(23, 23, 23, 0.9);
+      background: var(--col-main-bg);
       border: 1px solid rgba(255, 255, 255, 0.04);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 16px;
@@ -109,12 +109,12 @@
           .circle {
             height: 34px;
             width: 34px;
-            background: #00bf58;
+            background: var(--col-main);
             border-radius: 50%;
             margin-right: 12px;
           }
           h3 {
-            color: #eee;
+            color: var(--col-main-text);
             font-size: 25px;
             margin: 0 12px 0 0;
           }
@@ -143,7 +143,7 @@
             .circle {
               height: 18px;
               width: 18px;
-              background: #00bf58;
+              background: var(--col-main);
               border-radius: 50%;
               margin-right: 7px;
             }
@@ -176,33 +176,39 @@
           .nav_menus a {
             font-weight: 200;
             padding: 5px 12px;
-            color: #aaa;
+            color: var(--text-faded);
             border-top: 3px solid transparent;
             font-size: 14px;
           }
     
           .nav_menus .active {
-            border-top: 3px solid #eee;
-            color: #eee;
+            border-top: 3px solid var(--col-main-text);
+            color: varI(--col-main-text);
           }
+        }
+        .input_error {
+          border: 1px solid var(--col-main);
         }
         .stake_action_form {
           background: #FFFFFF1F;
           width: 95%;
-          margin: 12px auto 0 auto;
+          margin: 10px auto 0 auto;
           border-radius: 25px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding-right: 12px;
+          overflow: hidden;
+         
           input {
              background: transparent;
             border: none;
             width: 100%;
-            color: #ccc;
+            color: var(--col-main-text);
             padding: 10px 1rem;
             outline: none;
+            font-size: 15px;
           }
+         
           .buttons {
             display: flex;
             align-items: center;
@@ -213,21 +219,28 @@
               cursor: pointer;
             }
             button {
-              background: #FFFFFF0A;
+              background: var(--col-main);
               font-size: 13px;
-              color: var(--text-faded);
-              padding: 4px 8px;
+              color: var(--col-main-text);
+              // padding: 4px 8px;
+              padding: 12px 1.2rem;
+              border-radius: 25px;
             }
-            .active_btn {
-              background: #F9AD15;
-              color: #fff;
-            }
+            // .active_btn {
+            //   background: #F9AD15;
+            //   color: #fff;
+            // }
           }
+        }
+        .error_message {
+          color: #E75B5C;
+          font-size: 13px;
+          margin: 2px 0 0 18px;
         }
       }
     }
     .rewards {
-      background: rgba(23, 23, 23, 0.9);
+      background: var(--col-main-bg);
       border: 1px solid rgba(255, 255, 255, 0.04);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 16px;
@@ -261,7 +274,7 @@
             }
           }
           h3 {
-            color: #eee;
+            color: var(--col-main-text);
             font-size: 25px;
             margin: 0 12px 0 0;
           }
@@ -279,7 +292,7 @@
             border-radius: 25px;
             font-size: 14px;
             padding: 6px 1rem;
-            color: #eee;
+            color: var(--col-main-text);
           }
         }
       }
@@ -306,7 +319,7 @@
             font-size: 13px;
           }
           .value {
-            color: #eee;
+            color: var(--col-main-text);
             display: flex;
             // align-items: center;
             font-size: 15px;
