@@ -182,7 +182,6 @@ export default function Layout({ children, router: { route }, networks }) {
     }
   }, [library, state.transactions, account])
 
-  const [isCollapse, setIsCollapse] = useState(false)
   return (
     <>
       <Head>
@@ -263,10 +262,34 @@ export default function Layout({ children, router: { route }, networks }) {
           <div className={`${styles.nav_menus}`}>
             <div className="flex-center">
               <Link href="/">
-                <h2 style={{ color: "#fff", margin: "0" }}>YSD</h2>
-                {/* <img src="/logo/yieldClub.svg" alt="" className={styles.logo} /> */}
+                {/* <h2 style={{ color: "#fff", margin: "0" }}>YSD</h2> */}
+                <img src="/logo/logo.png" alt="" className={styles.logo} />
               </Link>
             </div>
+            <nav className={styles.navbar}>
+              <div className={styles.nav_menus_mid}>
+                <div className={`flex ${styles.menu}`}>
+                  <Link href="/">
+                    <a className={router.asPath === "/" ? styles.active : ""}>
+                      {" "}
+                      Staking
+                    </a>
+                  </Link>
+                </div>
+
+                <div className={`flex ${styles.menu}`}>
+                  <Link href="/auction">
+                    <a
+                      className={
+                        router.asPath.includes("auction") ? styles.active : ""
+                      }
+                    >
+                      Auction
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </nav>
             <div className="flex-center">
               <Link href="/how-to-join">
                 <a>

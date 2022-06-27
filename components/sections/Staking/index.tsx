@@ -20,7 +20,7 @@ import { addresses } from "utils/constants"
 
 const REFERRER_KEY = "REFERRER_ID"
 
-const Banner = ({
+const Staking = ({
   state,
   networks,
   dispatch,
@@ -177,32 +177,28 @@ const Banner = ({
               <p>$.998121</p>
             </div>
           </div>
-          <nav className={classes.navbar}>
+          {/* <nav className={classes.navbar}>
             <div className={classes.nav_menus}>
               <div
                 className={`flex ${classes.menu}`}
                 onClick={() => setCurrentTab(0)}
               >
-                {/* <Link href="/"> */}
                 <a className={currentTab === 0 ? classes.active : ""}>
                   {" "}
                   Staking
                 </a>
-                {/* </Link> */}
               </div>
 
               <div className={`flex ${classes.menu}`}>
-                {/* <Link href="/referral"> */}
                 <a
                   className={currentTab === 1 ? classes.active : ""}
                   onClick={() => setCurrentTab(1)}
                 >
                   Auction
                 </a>
-                {/* </Link> */}
               </div>
             </div>
-          </nav>
+          </nav> */}
 
           <div className={classes.stake}>
             <p className={classes.title}>My Stake</p>
@@ -328,4 +324,4 @@ const Banner = ({
   )
 }
 
-export default Banner
+export default Staking

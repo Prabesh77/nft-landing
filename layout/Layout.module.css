@@ -25,16 +25,6 @@
   height: 100%;
 }
 
-.logo {
-  width: 150px;
-}
-
-@media(max-width: 500px) {
-  .logo {
-    width: 100px;
-  }
-
-}
 
 .ReactCollapse--collapse {
   transition: height 500ms;
@@ -215,9 +205,10 @@
 
 
 @media all and (max-width: 796px) {
-  .menu {
+  /* .menu {
     display: none !important;
-  }
+  } */
+
   .hamburger {
     display: block;
   }
@@ -340,7 +331,7 @@
 
 .nav_menus {
   display: flex;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   justify-content: space-between;
   /* background: 
@@ -349,7 +340,7 @@
 
 @media(max-width: 600px) {
   .header   {
-    height: 100px;
+    min-height: 150px;
   }
   .how_to_join {
     margin: 0 1rem;
@@ -358,13 +349,53 @@
   padding: 7px 0 0 0;
   }
   .logo {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 
   }
   .nav_menus {
     flex-direction: column;
     align-items: center;
     padding-bottom: 5px;
+  }
+}
+
+
+.navbar {
+  /* nav menus */
+  
+}
+
+.nav_menus_mid {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav_menus_mid .menu {
+  margin-left: 36px;
+  position: relative;
+}
+
+.nav_menus_mid a {
+  font-weight: 200;
+  padding: 5px 12px;
+  color: var(--text-faded);
+  border-bottom: 2px solid transparent;
+}
+
+.nav_menus_mid .active {
+  border-bottom: 2px solid var(--col-main-text);
+  color: var(--col-main-text);
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    margin-bottom: 12px;
+  }
+  .nav_menus_mid .menu {
+    margin-left: 16px;
+    position: relative;
   }
 }
 
