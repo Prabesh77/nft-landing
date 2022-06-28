@@ -214,4 +214,104 @@
       
     }
   }
+
+  // AUCTION CARD STYLES
+
+  .auction_card {
+    background: #FFFFFF0A;
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    @media(max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .left {
+      .value {
+        display: flex;
+        align-items: center;
+        .circle {
+          height: 34px;
+          width: 34px;
+          background: var(--col-main);
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+        h3 {
+          color: var(--col-main-text);
+          font-size: 25px;
+          margin: 0 12px 0 0;
+        }
+        .minor {
+          color: var(--text-faded);
+          font-size: 15px;
+        }
+      }
+      .end_price {
+        color: var(--text-faded);
+        margin-top: 1rem;
+      }
+    }
+    .right {
+      text-align: right;
+      @media(max-width: 600px) {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      button {
+        background: var(--col-main);
+        color: var(--col-main-text);
+        border-radius: 25px;
+        font-size: 13px;
+        padding: 4px 16px;
+        font-weight: 600;
+      }
+      .date {
+        color: var(--text-faded);
+        margin-top: 1rem;
+      }
+    }
+  }
+
+
+
+  // NO auction page styles
+  .no_auction_content {
+    max-width: 700px;
+    .top_content {
+      h1 {
+        color: var(--col-main-text);
+        font-size: 50px;
+      }
+      p {
+        color: var(--text-faded);
+      }
+      button {
+        background: var(--col-main-text);
+        border-radius: 25px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 2.5rem;
+        font-weight: 600;
+      }
+    }
+    .auctions {
+      margin-top: 2.5rem;
+      background: var(--col-main-bg);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 700px;
+      padding: 1.5rem;
+      .auction_title {
+        color: var(--text-faded);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
   

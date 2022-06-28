@@ -1,4 +1,4 @@
-import Banner from "components/sections/Banner"
+import Banner from "components/sections/Staking"
 import DepositHistory from "components/sections/DepositHistory"
 import Disclaimer from "components/sections/Disclaimer"
 import Features from "components/sections/Features"

@@ -1,6 +1,7 @@
 import Auction from "components/sections/Auction"
+import NoAuction from "components/sections/Auction/NoAuction"
 
-const auction = ({
+const AuctionPage = ({
   state,
   networks,
   dispatch,
@@ -18,8 +19,9 @@ const auction = ({
         userInfo={userInfo}
         connectWallet={connectWallet}
       />
+      <NoAuction />
     </div>
   )
 }
 
-export default auction
+export default AuctionPage
